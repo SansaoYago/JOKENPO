@@ -5,6 +5,6 @@
     src: url(../font/jokenpo.ttf);
 }
 
-input[radio] {
+input {
     display: none;
 }
