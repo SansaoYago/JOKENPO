@@ -4,3 +4,7 @@
     font-family: 'jokenpo';
     src: url(../font/jokenpo.ttf);
 }
+
+input[radio] {
+    display: none;
+}
