@@ -9,6 +9,7 @@ const resp = document.querySelector('div#resp')
             jog.appendChild(imgP)
             computador.innerHTML = `<p style=" text-align: center;">Computador</p><br>`
             computador.appendChild(imgC)
+            winner.innerHTML = `${venc}`
 
         }
 
@@ -19,7 +20,7 @@ const resp = document.querySelector('div#resp')
         const jog = document.getElementById("player")
         const computador = document.getElementById("comp")
         const winner = document.getElementById("winner")
-        let player, comp
+        let player, comp, venc
 
         //Escolhendo a jogada do player
         for (let cont = 0; cont <= 2; cont++) {
@@ -30,6 +31,7 @@ const resp = document.querySelector('div#resp')
         //Fim da escolha do player
 
         comp = Math.floor(Math.random() * 3 + 1)
+
         
         imgP.setAttribute('id', 'foto')
         imgC.setAttribute('id', 'Foto')
@@ -59,8 +61,13 @@ const resp = document.querySelector('div#resp')
             imgP.setAttribute('src', 'img/tesoura.jpg')
             saida()
         }
-        
+
         if (player == (comp + 1) {
-            winner.innerHTML = "EMPATE"
+            venc = "EMPATE"
+        } else if (player == 0 && comp == 3 || player == 1 && comp == 1 || player == 2 && comp == 2) {
+            venc = "Você venceu!"
+        } else {
+            venc = "Computador venceu!"
         }
+        
     })
