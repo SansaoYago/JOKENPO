@@ -9,7 +9,7 @@ const resp = document.querySelector('div#resp')
             jog.appendChild(imgP)
             computador.innerHTML = `<p style=" text-align: center;">Computador</p><br>`
             computador.appendChild(imgC)
-            winner.innerHTML = `${venc}`
+            //winner.innerHTML = `${venc}`
 
         }
 
