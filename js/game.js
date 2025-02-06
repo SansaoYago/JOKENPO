@@ -60,7 +60,7 @@ const resp = document.querySelector('div#resp')
             saida()
         }
         
-        if (player == 0 && comp == 1) {
+        if (player == (comp + 1) {
             winner.innerHTML = "EMPATE"
         }
     })
