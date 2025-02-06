@@ -5,9 +5,9 @@ const resp = document.querySelector('div#resp')
         e.preventDefault()
 
         function saida() {
-            jog.innerHTML = `Você<br>`
+            jog.innerHTML = `<p style=" text-align: center;">Você</p><br>`
             jog.appendChild(imgP)
-            computador.innerHTML = `Computador<br>`
+            computador.innerHTML = `<p style=" text-align: center;">Computador</p><br>`
             computador.appendChild(imgC)
 
         }
