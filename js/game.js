@@ -53,23 +53,12 @@ const resp = document.querySelector('div#resp')
          //Saída de dados
         if (player == 0) {
             imgP.setAttribute('src', 'img/pedra.jpg')
-            //saida()
+            saida()
         } else if (player == 1) {
             imgP.setAttribute('src', 'img/papel.jpg')
-            //saida()
+            saida()
         } else if (player == 2) {
             imgP.setAttribute('src', 'img/tesoura.jpg')
-            //saida()
-        }
-
-        if (player == (comp - 1) {
-            venc = "EMPATE"
-            saida()
-        } else if (player == 0 && comp == 3 || player == 1 && comp == 1 || player == 2 && comp == 2) {
-            venc = "Você venceu!"
-            saida()
-        } else {
-            venc = "Computador venceu!"
             saida()
         }
         
