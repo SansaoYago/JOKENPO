@@ -25,7 +25,6 @@ const resp = document.querySelector('div#resp')
                 player = cont
             }
         }
-            player += + 1
         //Fim da escolha do player
 
         comp = Math.floor(Math.random() * 3 + 1)
@@ -45,11 +44,11 @@ const resp = document.querySelector('div#resp')
         if (player == null) {
             alert("Faça uma escolha antes de jogar!")
         } else {
-            if (player == 1) {
+            if (player == 0) {
                 imgP.setAttribute('src', 'img/pedra.jpg')
-            } else if (player == 2) {
+            } else if (player == 1) {
                 imgP.setAttribute('src', 'img/papel.jpg')
-            } else if (player == 3) {
+            } else if (player == 2) {
                 imgP.setAttribute('src', 'img/tesoura.jpg')
             }
             //Saída de dados
