@@ -37,7 +37,7 @@ const resp = document.querySelector('div#resp')
             imgC.setAttribute('src', 'img/pedra.jpg')
         } else if (comp == 2) {
             imgC.setAttribute('src', 'img/papel.jpg')
-        } else if (somp == 3) {
+        } else if (comp == 3) {
             imgC.setAttribute('src', 'img/tesoura.jpg')
         }
 
