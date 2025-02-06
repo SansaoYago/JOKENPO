@@ -4,71 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JO-KEN-PO</title>
-    <link rel="stylesheet" href="css/index.css">
-    <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-        }
-
-        img {
-            max-width: 150px;
-            border-radius: 50%;
-        }
-
-        img:hover {
-            transition: 150ms;
-            box-shadow: 0px 0px 13px 2px rgba(255, 0, 0, 0.288);
-        }
-
-        body {
-            background-color: lightblue;
-            padding: 15px;
-        }
-
-        section {
-            display: flex;
-            justify-content: space-between;
-            
-            margin: 15px 0px;
-        }
-
-        h1 {
-            font: 500 2.7rem 'jokenpo';
-            text-align: center;
-            letter-spacing: 1.1rem;
-        }
-
-        #btn {
-            text-align: center;
-        }
-
-        button {
-            background-color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 600;
-            cursor: pointer;
-            padding: 6px 9px;
-            border: none;
-            box-shadow: 0px 1px 0.9px 1px rgba(0, 0, 0, 0.088);
-            border-radius: 35%;
-        }
-
-        button:hover {
-            color: white;
-            background-color: rgba(30, 29, 29, 0.604);
-            transition: 250ms;
-        }
-
-        input {
-            display: none;
-        }
-
-        #resp {
-            text-align: center;
-            padding: 20px 0px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">  
 </head>
 <body>
     <header>
@@ -96,43 +32,15 @@
             </div>
         </section>
         <div id="btn"><button>Jogar</button></div>
-        <div id="resp"></div>
+        <div id="resp">
+            <div id="player"></div>
+            <div id="comp"></div>
+        </div>
     </main>
     <footer></footer>
 </body>
 <script>
-//Script local, para testar antes de linka-lo
-    const btn = document.querySelector('button')
-    const resp = document.querySelector('div#resp')
-
-    btn.addEventListener("click", (e) => {
-        e.preventDefault()
-
-        let label = document.getElementsByName("escolha")
-        let img = document.createElement("img")
-        let player, comp, selecao
-
-        //Escolhendo a jogada
-        for (let cont = 0; cont <= 2; cont++) {
-            if(label[cont].checked) {
-                player = cont
-            }
-        }//Fim da escolha
-        
-        img.setAttribute('id', 'foto')
-        if (player == 0) {
-            img.setAttribute('src', 'img/pedra.jpg')
-        } else if (player == 1) {
-            img.setAttribute('src', 'img/papel.jpg')
-        } else if (player == 2) {
-            img.setAttribute('src', 'img/tesoura.jpg')
-        }
-
-        //Saída de dados
-        resp.innerHTML = `Voce escolheu<br>`
-        resp.appendChild(img)
-    })
-
+//Script local, para testar antes de linka-lô
 </script>
 <script src="js/game.js"></script>
 </html>
