@@ -58,5 +58,9 @@ const resp = document.querySelector('div#resp')
         } else if (player == 2) {
             imgP.setAttribute('src', 'img/tesoura.jpg')
             saida()
-        }   
+        }
+        
+        if (player == 0 && comp == 1) {
+            winner.innerHTML = "EMPATE"
+        }
     })
