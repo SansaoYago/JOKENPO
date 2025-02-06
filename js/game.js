@@ -67,10 +67,10 @@ const resp = document.querySelector('div#resp')
             saida()
         } else if (player == 0 && comp == 3 || player == 1 && comp == 1 || player == 2 && comp == 2) {
             venc = "Você venceu!"
-            saída()
+            saida()
         } else {
             venc = "Computador venceu!"
-            saída()
+            saida()
         }
         
     })
