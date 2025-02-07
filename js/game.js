@@ -9,7 +9,7 @@ const resp = document.querySelector('div#resp')
             jog.appendChild(imgP)
             computador.innerHTML = `<p style=" text-align: center;">Computador</p><br>`
             computador.appendChild(imgC)
-            //winner.innerHTML = `${venc}`
+            winner.innerHTML = resp
 
         }
 
@@ -20,7 +20,7 @@ const resp = document.querySelector('div#resp')
         const jog = document.getElementById("player")
         const computador = document.getElementById("comp")
         const winner = document.getElementById("winner")
-        let player, comp, venc
+        let player, comp, resp
 
         //Escolhendo a jogada do player
         for (let cont = 0; cont <= 2; cont++) {
@@ -36,11 +36,13 @@ const resp = document.querySelector('div#resp')
         imgP.setAttribute('id', 'foto')
         imgC.setAttribute('id', 'Foto')
 
+        //Depurador de jogada inválida
         while (player == null) {
             alert("Faça uma escolha antes de jogar!")
             break
         }
 
+        //Adicionando imagem referente a jogada do computador
         if (comp == 1) {
             imgC.setAttribute('src', 'img/pedra.jpg')
         } else if (comp == 2) {
@@ -49,16 +51,30 @@ const resp = document.querySelector('div#resp')
             imgC.setAttribute('src', 'img/tesoura.jpg')
         }
 
-
-         //Saída de dados
+        //Adicionando imagem referente a jogada do player
         if (player == 0) {
             imgP.setAttribute('src', 'img/pedra.jpg')
-            saida()
+  
         } else if (player == 1) {
             imgP.setAttribute('src', 'img/papel.jpg')
-            saida()
+       
         } else if (player == 2) {
             imgP.setAttribute('src', 'img/tesoura.jpg')
+          
+        }
+
+        //Decisão do vencedor
+        if (player ==  (comp - 1)) {
+            resp = "EMPATE!"
+        } else if (player == 0 && comp == 3 || player == 1 && comp == 1 || player == 2 && comp == 2) {
+            resp = "Você venceu!"
+        } else {
+            resp = "Computador venceu!"
+        }
+
+        //Saída de dados
+        //Depurador confirmando saída de dados, caso player tenha jogado
+        if (player >= 0) {
             saida()
         }
         

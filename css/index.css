@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Rubik+Distressed&display=swap');
+
 @font-face {
     font-family: 'jokenpo';
     src: url(../font/jokenpo.ttf);
@@ -65,8 +69,28 @@ input {
 }
 
 #resp {
+    font: normal 500 1.8rem 'Pangolin';
+    
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
     padding: 20px 0px;
+}
+
+#vitoria {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#winner {
+    font: normal 500 2rem "Rubik Distressed", serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.882);
+    padding: 4px 6px;
+    margin: 10px;
+
+
+    border-radius: 12px;
 }
