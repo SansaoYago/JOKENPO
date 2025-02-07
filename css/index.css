@@ -73,7 +73,7 @@ input {
     
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-arround;
+    justify-content: space-around;
     padding: 20px 0px;
 }
 
