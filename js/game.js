@@ -10,7 +10,6 @@ const resp = document.querySelector('div#resp')
             computador.innerHTML = `<p style=" text-align: center;">Computador</p><br>`
             computador.appendChild(imgC)
             winner.innerHTML = resp
-
         }
 
         //Variáveis
